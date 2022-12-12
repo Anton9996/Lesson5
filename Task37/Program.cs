@@ -50,14 +50,24 @@ int[] GetMults(int[] array)
     int i = 0;
     while (lastIndex > firstIndex)
     {
-        result[i] = array[firstIndex]*array[lastIndex];
+        result[i] = array[firstIndex] * array[lastIndex];
         ++firstIndex;
         --lastIndex;
         ++i;
     }
     if (lastIndex == firstIndex)
     {
-        result[size-1]= array[lastIndex];
+        result[size - 1] = array[lastIndex];
     }
     return result;
+    //for
+    // int size = array.Length / 2;
+    // if (array.Length % 2 != 0) size++;
+    // int[] result = new int[size];
+    // for (int i = 0; i < array.Length; i++)
+    // {
+    //     result[i] = array[i] * array[array.Length - i - 1];
+    // }
+    // if (array.Length % 2 != 0) result[size - 1] = array[array.Length/2];
+    // return result;
 }
